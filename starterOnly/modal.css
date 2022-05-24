@@ -137,8 +137,8 @@ main {
   font-family: var(--font-slab);
 }
 
-/* Modal form */
-
+/* MODAL FORM */
+/* BOUTON CEST PARTI */
 .button {
   background: #fe142f;
   margin-top: 0.5em;
@@ -153,10 +153,12 @@ main {
   background: #3876ac;
 }
 
+/* POLICE */
 .smFont {
   font-size: 16px;
 }
 
+/* BACKGROUND DU FORMULR */
 .bground {
   display: none;
   position: fixed;
@@ -296,6 +298,8 @@ input[data-error]::after {
   left: 21%;
   top: 19%;
 }
+
+/* CROIX BOUTON FERMER DU FORMULR */
 .close {
   position: absolute;
   right: 15px;
@@ -306,6 +310,9 @@ input[data-error]::after {
   cursor: pointer;
   transform: scale(0.7);
 }
+
+
+
 .close:before,
 .close:after {
   position: absolute;
@@ -321,6 +328,7 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
+
 .btn-submit,
 .btn-signup {
   background: #fe142f;
