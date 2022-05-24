@@ -18,14 +18,11 @@ const formData = document.querySelectorAll(".formData");
 // BOUTON CROIX POUR FERMER LE FORMULR
 const btnCroix = document.querySelector("[data-croix]");
 
-// CLICK CROIX FERMER FORMULR
-// btnCroix.removeEventListener("click", closeModal);
-
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // CLICK FERMER LE FORMULR
-btnCroix.removeEventListener("click", closeModal);
+btnCroix.addEventListener("click", closeModal);
 
 // launch modal form
 function launchModal() {
