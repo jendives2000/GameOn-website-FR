@@ -8,28 +8,30 @@ function editNav() {
 }
 
 // DOM Elements
-
+// SELECTION DU FORMULR
 const modalbg = document.querySelector(".bground");
 
+// SELECTION DE TOUS LES BTONS MODAL-BTN (mais seul 1 bton existe) en un node.list
 const modalBtn = document.querySelectorAll(".modal-btn");
 
+// SELECTION DE TOUS LES DIVs formData (7 existe) en un node.list
 const formData = document.querySelectorAll(".formData");
+
+// CLICK OUVRIR LE FORMULR (BTON JE M INSCRIS)
+modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // BOUTON CROIX POUR FERMER LE FORMULR
 const btnCroix = document.querySelector("[data-croix]");
 
-// launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
 // CLICK FERMER LE FORMULR
 btnCroix.addEventListener("click", closeModal);
 
-// launch modal form
+// FUNC OUVRE LE FORMULR
 function launchModal() {
   modalbg.style.display = "block";
 }
 
-// FERMER LE FORMULR
+// FUNC FERME LE FORMULR
 function closeModal() {
   modalbg.style.display = "none";
 }
