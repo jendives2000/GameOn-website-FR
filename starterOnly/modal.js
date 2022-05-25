@@ -8,7 +8,7 @@ function editNav() {
 }
 
 // DOM Elements
-// SELECTION DU FORMULR
+// SELECTION DU DIV DU FORMULR
 const modalbg = document.querySelector(".bground");
 
 // SELECTION DE TOUS LES BTONS MODAL-BTN (mais seul 1 bton existe) en un node.list
@@ -26,12 +26,31 @@ const btnCroix = document.querySelector("[data-croix]");
 // CLICK FERMER LE FORMULR
 btnCroix.addEventListener("click", closeModal);
 
-// FUNC OUVRE LE FORMULR
+// FUNC OUVRE LE DIV DU FORMULR
 function launchModal() {
   modalbg.style.display = "block";
 }
 
-// FUNC FERME LE FORMULR
+// FUNC FERME LE DIV DU FORMULR
 function closeModal() {
   modalbg.style.display = "none";
 }
+
+// PREVIENS LE FORMULR DE SE FERMER SI IL NEST PAS VALIDE
+const formulr = document.getElementById("formulr");
+
+formulr.addEventListener("submit", (e) => {
+  const btonCparti = document.getElementById("bton-cparti");
+  if (btonCparti.valid === false) {
+    e.preventDefault();
+  }
+});
+
+// CONST DU CHECKBOX "J AI LU ET APP"
+const inputCheckBox1 = document.getElementById("checkbox1");
+
+// CONST DES BTON RADIO LOCATIONS
+const inputLocation = document.getElementsByClass("checkbox-input");
+
+// CONST DES CHAMPS DE REMPLISSAGE TEXTE
+const inputText = document.getElementsByClass("text-control");

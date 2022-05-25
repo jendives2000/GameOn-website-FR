@@ -79,7 +79,7 @@
           </p>
 
           <!-- BTON JE M INSCRIS -->
-          <button class="btn-signup modal-btn">
+          <button class="btn-signup modal-btn" id="bton-cparti" >
             je m'inscris
           </button>
         </div>
@@ -104,7 +104,8 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              onsubmit="validate()"
+              id="formulr"
             >
               <div
                 class="formData">
@@ -265,6 +266,7 @@
                 type="submit"
                 class="button"
                 value="C'est parti"
+                id="bton-submit"
               />
             </form>
 
