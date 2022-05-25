@@ -38,12 +38,29 @@ function closeModal() {
 
 // PREVIENS LE FORMULR DE SE FERMER SI IL NEST PAS VALIDE
 const formulr = document.getElementById("formulr");
+const btonCparti = document.getElementById("bton-cparti");
 
 formulr.addEventListener("submit", (e) => {
-  const btonCparti = document.getElementById("bton-cparti");
   if (btonCparti.valid === false) {
     e.preventDefault();
   }
+});
+
+// AJOUTE AU DIV DE ERROR-PRENOM UN MESSAGE D'ERREUR
+const errorPrenom = document.getElementById("error-prenom");
+const prenom = document.getElementById("first");
+let messagePrenom = [];
+
+prenom.addEventListener("invalid", (e) => {
+  messagePrenom.push("Veuillez entrer un prénom valide.");
+  errorPrenom.innerText = messagePrenom.join(", ");
+});
+
+// Supprime le message d'erreur une fois qu'on sort du champs
+prenom.addEventListener("focusout", (e) => {
+  errorPrenom.innerHTML = "";
+  // réinitialise le messagePrenom pour empêcher sa répétition
+  messagePrenom = [];
 });
 
 // CONST DU CHECKBOX "J AI LU ET APP"

@@ -87,10 +87,6 @@
         <div class="hero-img">
           <img src="./bg_img.jpg" alt="img" />
         </div>
-
-        <!-- <button class="btn-signup modal-btn">
-          je m'inscris
-        </button> -->
       </div>
 
       <div class="bground">
@@ -104,12 +100,15 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="validate()"
               id="formulr"
-            >
+              >
+              <!-- onsubmit="validate()" -->
               <div
                 class="formData">
                 <label for="first">Prénom</label><br>
+                
+                
+
                 <input
                   class="text-control"
                   type="text"
@@ -119,6 +118,8 @@
                   required
                 /><br>
               </div>
+              <!-- MESSAGE D'ERREUR POUR JavaScript -->
+              <div class="" id="error-prenom"></div>
               <div
                 class="formData">
                 <label for="last">Nom</label><br>
